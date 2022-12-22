@@ -5,7 +5,7 @@
 	const meals = getContext<Meal[]>('meals')
 </script>
 
-<select name="meal">
+<select name="meal" {...$$props}>
 	{#each meals as meal}
 		<option value={meal.id}>{meal.name}</option>
 	{/each}

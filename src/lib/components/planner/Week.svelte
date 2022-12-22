@@ -8,6 +8,6 @@
 
 <List>
 	{#each days as day (day.id)}
-		<Day day={day.name} />
+		<Day {day} />
 	{/each}
 </List>

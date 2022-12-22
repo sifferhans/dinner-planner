@@ -9,5 +9,6 @@ export interface Day {
 	id: number
 	created_at: string
 	name: string
+	day: number
 	meal: Meal['id']
 }
