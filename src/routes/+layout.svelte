@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Middagsplanlegger</title>
+	<title>Middag</title>
 </svelte:head>
 
 <NavBar />

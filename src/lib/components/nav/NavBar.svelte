@@ -19,6 +19,7 @@
 <style>
 	header {
 		padding-block: 1rem;
+		margin-bottom: 2rem;
 		display: flex;
 		justify-content: space-between;
 		gap: 1rem;

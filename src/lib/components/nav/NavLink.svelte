@@ -4,7 +4,7 @@
 	export let href: string
 </script>
 
-<a {href} class:active={$page.route.id == href}>
+<a {href} class:active={$page.route.id === href}>
 	<slot />
 </a>
 
