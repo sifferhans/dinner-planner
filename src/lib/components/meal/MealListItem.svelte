@@ -2,38 +2,45 @@
 	import type { Meal } from 'src/types'
 	import ListItem from '$lib/components/ListItem.svelte'
 	import IconExternalLink from '$lib/components/icons/IconExternalLink.svelte'
+	import IconEdit from '../icons/IconEdit.svelte'
 
+	export let id: number
 	export let name: Meal['name']
 	export let recipe_url: Meal['recipe_url'] = '#'
 </script>
 
 <ListItem>
-	<a href={recipe_url} target="_blank" rel="noreferrer">
-		<p>{name}</p>
+	<div>
+		<a href="/meals/{id}/edit">
+			<p>{name}</p>
+			<!-- <IconEdit /> -->
+		</a>
 		{#if recipe_url}
-			<span>
+			<a href={recipe_url} target="_blank" rel="noreferrer">
 				Gå til oppskrift
 				<IconExternalLink />
-			</span>
+			</a>
 		{/if}
-	</a>
+	</div>
 </ListItem>
 
 <style>
-	a {
-		color: inherit;
-		text-decoration: none;
-		width: 100%;
-		display: inline-flex;
+	div {
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
 	}
 
-	span {
-		display: flex;
+	a:has(p) {
+		text-decoration: none;
+	}
+
+	a {
+		color: inherit;
+		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
-		text-decoration: underline;
+		/* text-decoration: none; */
 	}
 </style>
