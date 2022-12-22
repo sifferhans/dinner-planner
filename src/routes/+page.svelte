@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms'
 	import Button from '$lib/components/Button.svelte'
 	import Week from '$lib/components/planner/Week.svelte'
 	import type { Day, Meal } from 'src/types'
@@ -7,7 +8,7 @@
 	const days = getContext<Day[]>('weekdays')
 </script>
 
-<form action="?/update" method="post">
+<form action="?/update" method="post" use:enhance>
 	<Week {days} />
 	<Button type="submit" block>Lagre</Button>
 </form>
