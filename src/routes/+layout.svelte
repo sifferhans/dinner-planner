@@ -1,7 +1,8 @@
 <script lang="ts">
+	import NavBar from '$lib/components/nav/NavBar.svelte'
 	import type { LayoutServerData } from './$types'
-	import '$lib/reset.css'
 	import { setContext } from 'svelte'
+	import '$lib/reset.css'
 
 	export let data: LayoutServerData
 
@@ -13,9 +14,7 @@
 	<title>Middagsplanlegger</title>
 </svelte:head>
 
-<header>
-	<strong>Middagsplanlegger</strong>
-</header>
+<NavBar />
 <main>
 	<slot />
 </main>
@@ -28,10 +27,6 @@
 
 		display: flex;
 		flex-direction: column;
-	}
-
-	header {
-		padding-block: 1rem;
 	}
 
 	main {
