@@ -1,5 +1,12 @@
 <script lang="ts">
-	import '$lib/reset.css';
+	import type { LayoutServerData } from './$types'
+	import '$lib/reset.css'
+	import { setContext } from 'svelte'
+
+	export let data: LayoutServerData
+
+	setContext('weekdays', data.days)
+	setContext('meals', data.meals)
 </script>
 
 <svelte:head>
@@ -24,12 +31,7 @@
 		padding-block: 1rem;
 	}
 
-	nav ul {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	nav li {
-		padding: 1rem;
+	main {
+		height: 100%;
 	}
 </style>

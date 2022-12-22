@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { Meal } from 'src/types';
+	import type { Meal } from 'src/types'
+	import { getContext } from 'svelte'
 
-	export let meals: Meal[];
+	const meals = getContext<Meal[]>('meals')
 </script>
 
 <select name="meal">

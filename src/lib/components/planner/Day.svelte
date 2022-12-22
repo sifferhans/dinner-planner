@@ -1,19 +1,13 @@
 <script lang="ts">
-	import type { Meal } from 'src/types';
-	import MealSelector from './MealSelector.svelte';
+	import type { Meal } from 'src/types'
+	import MealSelector from './MealSelector.svelte'
 
-	export let day: string;
-
-	const meals: Meal[] = [
-		{ id: '1', name: 'Burger' },
-		{ id: '2', name: 'Lasagne' },
-		{ id: '3', name: 'Taco' }
-	];
+	export let day: string
 </script>
 
 <div class="day">
 	<small>{day}</small>
-	<MealSelector {meals} />
+	<MealSelector />
 </div>
 
 <style>

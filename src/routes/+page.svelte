@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types'
 	import Week from '$lib/components/planner/Week.svelte'
+	import type { Day, Meal } from 'src/types'
+	import { getContext } from 'svelte'
 
-	export let data: PageData
+	const days = getContext<Day[]>('weekdays')
 </script>
 
-<Week />
+<Week {days} />

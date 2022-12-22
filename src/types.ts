@@ -1,10 +1,12 @@
 export interface Meal {
-	id: string
+	id: number
+	created_at: string
 	name: string
 }
 
-export type Day = {
+export interface Day {
 	id: number
+	created_at: string
 	name: string
-	meal: number
+	meal: Meal['id']
 }
