@@ -13,7 +13,11 @@
 
 <style>
 	div {
-		display: grid;
-		gap: 0.5rem;
+		border: 1px solid;
+		border-radius: 0.5rem;
+	}
+
+	:global(.day:not(:last-child)) {
+		border-bottom: 1px solid;
 	}
 </style>

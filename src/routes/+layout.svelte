@@ -25,6 +25,9 @@
 		max-width: 70ch;
 		margin-inline: auto;
 		padding-inline: 1rem;
+
+		display: flex;
+		flex-direction: column;
 	}
 
 	header {
