@@ -12,9 +12,6 @@
 <style>
 	.day {
 		padding: 0.75rem;
-		/* border: 1px solid; */
-		/* border-radius: 0.5rem; */
-
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;

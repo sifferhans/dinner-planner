@@ -14,7 +14,7 @@
 <style>
 	div {
 		border: 1px solid;
-		border-radius: 0.5rem;
+		border-radius: 1rem;
 	}
 
 	:global(.day:not(:last-child)) {
